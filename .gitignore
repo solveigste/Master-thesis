@@ -1,0 +1,10 @@
+*.pyc
+*.geo_unrolled
+*.msh
+*.pvd
+*.vtu
+*.DS_store
+*.idea
+*.png
+*.zip
+*.pvsm
