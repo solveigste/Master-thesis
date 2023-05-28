@@ -1,0 +1,36 @@
+{
+    "domain": {
+        "xmin": 0.0,
+        "ymin": 0.0,
+        "xmax": 100.0,
+        "ymax": 50.0
+    },
+    "mesh_args": {
+        "mesh_size_frac": 1.0,
+        "mesh_size_min": 1.0,
+        "mesh_size_bound": 10.0
+    },
+    "fractured_domain": {
+        "active" : true,
+        "angle": 0,
+        "fractures_file": "fractures_simulation_3_32_100_x_50.csv",
+        "constraints": [32, 33]
+    },
+    "function_suffix": "simulation_2",
+    "bc_mechanics": {
+        "type": ["Dirichlet","Neumann"],
+        "direction": [["x","y","x"],["y"]],
+        "region": [["east","south","west"],["north"]]
+    },
+    "bc_fluid": {
+        "type": ["Dirichlet","Neumann"],
+        "region": [["west","east"],["south","north"]]
+    },
+    "m_eta": 1.0,
+    "m_c0": 5.0e-10,
+    "m_kappa_c": 1e-07,
+    "m_normal_kappa_c": 1e-15,
+    "delta_t": 10000.0,
+    "final_t": 1000000.0,
+    "report_each_steps": 10
+}
